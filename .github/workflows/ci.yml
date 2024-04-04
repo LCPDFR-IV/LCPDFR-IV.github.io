@@ -1,6 +1,11 @@
 name: Deploy to Github Pages
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -17,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: mkdocs
+          ref: github-pages
           fetch-depth: 0
       - uses: actions/setup-python@v4
         with:
