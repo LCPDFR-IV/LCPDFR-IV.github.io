@@ -108,14 +108,14 @@ plugins:
     auto_caption: true,
     caption_position: bottom
   }
-  - git-authors: {
-    show_email_address: false,
-    sort_authors_by: contribution,
-    fallback_to_empty: true,
-    show_contribution: true,
-    strict: !ENV [ENABLE_STRICT_GIT_AUTHORS, false],
-    enabled: !ENV [ENABLE_GIT_AUTHORS, false]
-  }
+#  - git-authors: {
+#    show_email_address: false,
+#    sort_authors_by: contribution,
+#    fallback_to_empty: true,
+#    show_contribution: true,
+#    strict: !ENV [ENABLE_STRICT_GIT_AUTHORS, false],
+#    enabled: !ENV [ENABLE_GIT_AUTHORS, false]
+#  }
 
 hooks:
   - extensions/external_links_md_extension.py
