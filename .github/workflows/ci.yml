@@ -1,0 +1,35 @@
+name: Deploy to Github Pages
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      ENABLE_STRICT: true
+      ENABLE_MINIFY: true
+      ENABLE_REMOVE_COMMENTS: true
+      ENABLE_GIT_AUTHORS: true
+      ENABLE_GIT_COMMITTERS: true
+      ENABLE_GIT_REVISION_DATE: true
+      ENABLE_STRICT_GIT_AUTHORS: true
+      ENABLE_STRICT_GIT_REVISION_DATE: true
+      ENABLE_OFFLINE: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mkdocs
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+          cache: pip
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip --disable-pip-version-check install --no-compile -r requirements.txt --upgrade
+      - run: git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
+      - run: mkdocs gh-deploy

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap');
+
+a[target='_blank'] {
+	text-decoration: underline;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.right {
+    display: block;
+    margin-left: auto;
+}
+
+.md-header__topic {
+    font-weight: bold;
+}
+
+p, ul, li, tr  {
+    /*font-size: 16px !important;*/
+}
+
+code {
+    text-wrap: wrap;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+}
+
+b, strong {
+    color: #698ef5 !important;
+}
+
+/*
+div.md-source__repository{
+    font-size: 10px !important;
+}
+*/
+div[data-md-type='navigation']{
+    font-weight: bold;
+}
+
+img {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+body > header {
+    border-bottom: 1px solid rgb(186,68,55);
+}
+
+div.video-container iframe {
+    aspect-ratio: 9/6 auto;
+    height: auto !important;
+}
+
+.md-typeset td:not([class]):not(:last-child) {
+    border-right: 1px solid rgba(255,255,255, 0.2);
+}
+
+.gslide-image img {
+    background: transparent !important; 
+}
+
+hr {
+    border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+    display: flow-root;
+    margin: 1.5em 0;
+}
+
+.md-copyright__highlight {
+    font-size: 15px;
+}
