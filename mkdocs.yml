@@ -2,7 +2,7 @@ site_name: LCPDFR-IV
 site_url: https://lcpdfr-iv.github.io/
 repo_name: LCPDFR-IV.github.io
 repo_url: https://github.com/LCPDFR-IV/LCPDFR-IV.github.io
-edit_uri: edit/dev/docs/
+edit_uri: edit/main/docs/
 use_directory_urls: true
 copyright: LCPDFR-IV
 strict: !ENV [ENABLE_STRICT, true]
