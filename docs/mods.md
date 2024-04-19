@@ -1,3 +1,8 @@
+---
+title: LCPDFR-IV Mods
+description: LCPDFR-IV Modpack Mods
+---
+
 # LCPDFR v0.6 Mods
 
 LCPDFR-IV is currently using [LCPDFR 1.1 Non Legacy](https://www.lcpdfr.com/downloads/gta4mods/g17media/4607-lcpd-first-response-legacy-edition/).
