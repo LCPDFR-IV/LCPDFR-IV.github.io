@@ -1,3 +1,4 @@
 nav:
     - Home: 'README.md'
+    - Downgrade: 'downgrade.md'
     - Mods: 'mods.md'
